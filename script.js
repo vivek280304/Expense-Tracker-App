@@ -83,6 +83,8 @@ for (const expense of expenses) {
     dateCell.textContent = expense.date;
     deleteCell.appendChild(deleteBtn);
 }
+
+// this code for switch dark and light mode 
 const toggleButton = document.getElementById('theme-toggle');
 const body = document.body;
 
