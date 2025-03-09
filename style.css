@@ -1,0 +1,286 @@
+/* Adding a Google Font (e.g., Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    font-family: 'Poppins', sans-serif , Verdana;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    /* color: #333; */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d5dadd;
+}
+
+h2 {
+    /* color: #444; */
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* Input section styles */
+.input-section {
+    /* background-color: white; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.input-section label {
+    font-weight: 600;
+    /* color: #555; */
+}
+
+.input-section select,
+.input-section input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.input-section input:focus,
+.input-section select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+#add-btn {
+    grid-column: span 2;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+#add-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Expenses list styles */
+.expenses-list {
+    /* background-color: white; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #d5dadd;
+}
+
+th {
+    /* background-color: #f9f9f9; */
+    /* color: #333; */
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+tfoot {
+    font-weight: 700;
+}
+
+#total-amount {
+    color: #3498db;
+}
+
+/* Delete button styles */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+body.dark-mode {
+    background-color: #372e2e;
+    color: rgb(255, 255, 255);
+    
+}
+#theme-toggle{
+    text-align: center;
+    padding: 5px;
+    margin-left: 700px;
+    border-radius: 30%;
+    border: #ffffff;
+}
+
+/* Add this to your existing CSS file */
+
+/* Footer styles */
+.app-footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    text-align: center;
+    color: #666;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+.footer-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.footer-credit {
+    margin: 15px 0;
+}
+
+.developer-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    color: #3498db;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.version-info {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #999;
+}
+
+/* Dark mode footer styles */
+.dark-mode .app-footer {
+    border-top-color: #444;
+}
+
+.dark-mode .footer-content {
+    color: #bbb;
+}
+
+.dark-mode .developer-name {
+    color: #eee;
+}
+
+.dark-mode .footer-links a {
+    color: #5dade2;
+}
+
+.dark-mode .footer-links a:hover {
+    color: #3498db;
+}
+
+.dark-mode .social-icon {
+    background-color: #333;
+    color: #5dade2;
+}
+
+.dark-mode .social-icon:hover {
+    background-color: #5dade2;
+    color: #222;
+}
+
+.dark-mode .version-info {
+    color: #888;
+}
+#social-icon{
+    text-decoration: none;
+    
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .input-section {
+        grid-template-columns: 1fr;
+    }
+
+    #add-btn {
+        grid-column: 1;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    #theme-toggle{
+        /* text-align: center; */
+        padding: 8px;
+        margin-left: 300px;
+        border-radius: 50%;
+        border: #ddd;
+    }
+
+}
