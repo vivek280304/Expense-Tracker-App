@@ -19,7 +19,7 @@ addBtn.addEventListener('click', function() {
         return;
     }
     if (isNaN(amount) || amount <=0 ) {
-        alert('Please enter a valid amoun')
+        alert('Invalid amount')
         return;
     }
     if(date === '') {
