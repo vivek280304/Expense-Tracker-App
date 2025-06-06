@@ -11,6 +11,21 @@
     <button id="theme-toggle">Dark</button>
     <!-- <img src="6637.p" alt="" srcset=""> -->
     <h1>Expense Tracker</h1>
+    
+    <!-- Salary Input Section -->
+    <div id="salary-section" class="salary-section">
+        <h2>Monthly Salary</h2>
+        <div class="salary-input-container">
+            <label for="salary-input">Enter Your Monthly Budget:</label>
+            <input type="number" id="salary-input" placeholder="eg: 50000" min="0">
+            <button id="set-salary-btn">Set Budget</button>
+            <p>Current Budget: ₹<span id="current-salary">0</span></p>
+        </div>
+        <div class="salary-display">
+            <p>Remaining Budget: ₹<span id="remaining-budget">0</span></p>
+        </div>
+    </div>
+
     <div id="input-section" class="input-section">
         <label for="category-select">Category:</label>
         <select id="category-select" required>
@@ -21,7 +36,6 @@
             <option value="Utility">Utility</option>
             <option value="Borrow">Borrow</option>
             <option value="Other">Other</option>
-
         </select>
         <label for="date-input">Date:</label>
         <input type="date" id="date-input" required>
@@ -29,6 +43,7 @@
         <input type="number" id="amount-input" placeholder="eg:5000" required>
         <button id="add-btn">Add</button>
     </div>
+    
     <div class="expenses-list">
         <h2>Expenses List</h2>
         <table>
@@ -37,11 +52,10 @@
                     <th>Category</th>
                     <th>Amount</th>
                     <th>Date</th>
-                    <th>     </th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody id="expnese-table-body">
-
             </tbody>
             <tfoot>
                 <tr>
@@ -51,36 +65,36 @@
                     <td></td>
                 </tr>
             </tfoot>
-
         </table>
     </div>
+    
     <!-- Add this at the end of your body tag, before the script tag -->
-
-
-<!-- Add Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><!-- Add this at the end of your body tag, before the script tag -->
-<footer class="app-footer">
-    <div class="footer-content">
-        <p>&copy; 2025 Expense Tracker App</p>
-        <div class="footer-links">
-            <a href=https://edition.cnn.com/2018/04/24/us/monkey-selfie-peta-appeal/index.html>Privacy Policy</a>
-            <a href=https://edition.cnn.com/2018/04/24/us/monkey-selfie-peta-appeal/index.html>Terms of Use</a>
-            <a href=https://www.instagram.com/_viveksharma_28?igsh=bWUxbW82Z2c5amtv&utm_source=qr >Contact</a>
-        </div>
-        <div class="footer-credit">
-            <p>Designed and developed by  <span class="developer-name">Vivek</span></p>
-            <div class="social-links">
-                <a  href= https://github.com/vivek280304 class="social-icon" title="GitHub"><i class="fa fa-github"></i></a>
-                <!-- <a href="#" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a> -->
-                <!-- <a href="#" class="social-icon" title="Twitter"><i class="fa fa-twitter"></i></a> -->
+    <!-- Add Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Add this at the end of your body tag, before the script tag -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Expense Tracker App</p>
+            <div class="footer-links">
+                <!-- <a href="https://edition.cnn.com/2018/04/24/us/monkey-selfie-peta-appeal/index.html">Privacy Policy</a> -->
+                <!-- <a href="https://edition.cnn.com/2018/04/24/us/monkey-selfie-peta-appeal/index.html">Terms of Use</a> -->
+                <a href="https://www.instagram.com/_viveksharma_28?igsh=bWUxbW82Z2c5amtv&utm_source=qr">Contact</a>
             </div>
+            <div class="footer-credit">
+                <p>Designed and developed by <span class="developer-name">Vivek</span></p>
+                <div class="social-links">
+                    <a href="https://github.com/vivek280304" class="social-icon" title="GitHub"><i class="fa fa-github"></i></a>
+                    <!-- <a href="#" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a> -->
+                    <!-- <a href="#" class="social-icon" title="Twitter"><i class="fa fa-twitter"></i></a> -->
+                </div>
+            </div>
+            <p class="version-info">Version 1.0.1</p>
         </div>
-        <p class="version-info">Version 1.0.0</p>
-    </div>
-</footer>
+    </footer>
 
-<!-- Add Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Add Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="script.js"></script>
 </body>
 </html>
