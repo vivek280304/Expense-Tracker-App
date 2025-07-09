@@ -7,311 +7,263 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
-    min-height: 100vh;
+    line-height: 1.6;
     color: #333;
+    background-color: #efe9e9;
+    padding: 20px;
+    min-height: 100vh;
     transition: all 0.3s ease;
 }
 
 /* Dark Theme */
-body.dark {
-    background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
-    color: #ddd;
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
 }
 
-/* Theme Toggle Button */
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 600;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    z-index: 1000;
+body.dark-theme .salary-section,
+body.dark-theme .input-section,
+body.dark-theme .expenses-list {
+    background-color: #2d2d2d;
+    border-color: #444;
 }
 
-#theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+body.dark-theme input,
+body.dark-theme select {
+    background-color: #3d3d3d;
+    color: #e0e0e0;
+    border-color: #555;
 }
+
+body.dark-theme table {
+    background-color: #2d2d2d;
+}
+
+body.dark-theme th {
+    background-color: #3d3d3d;
+}
+
+body.dark-theme tbody tr:nth-child(even) {
+    background-color: #353535;
+}
+
+body.dark-theme tfoot {
+    background-color: #3d3d3d;
+}
+
 
 /* Main Title */
 h1 {
     text-align: center;
-    color: white;
+    margin-bottom: 30px;
     font-size: 2.5rem;
-    margin: 60px 0 30px 0;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    font-weight: 700;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Salary Section Styling */
-.salary-section {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
+body.dark-theme h1 {
+    color: #e0e0e0;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.1);
 }
 
+/* Section Styles */
+.salary-section,
+.input-section,
+.expenses-list {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Salary Section */
 .salary-section h2 {
-    margin: 0 0 25px 0;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    color: #28a745;
+    font-size: 1.5rem;
+}
+
+body.dark-theme .salary-section h2 {
+    color: #4caf50;
 }
 
 .salary-input-container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.salary-input-container label {
-    display: block;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: white;
-}
-
-#salary-input {
-    width: 250px;
-    padding: 15px 20px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    font-size: 1rem;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
-    margin-right: 15px;
-    transition: all 0.3s ease;
-}
-
-#salary-input:focus {
-    outline: none;
-    border-color: #fff;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-}
-
-#set-salary-btn {
-    background: linear-gradient(135deg, #00b894, #00a085);
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
-}
-
-#set-salary-btn:hover {
-    background: linear-gradient(135deg, #00a085, #00b894);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
-}
-
-.salary-input-container p {
-    margin: 20px 0 0 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.salary-display {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 20px;
-    border: 1px solid rgba(123, 105, 105, 0.2);
-}
-
-.salary-display p {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
-    /* text-shadow: 0 1px 3px rgba(159, 150, 150, 0.3); */
-}
-
-#current-salary, #remaining-budget {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #504604;
-    /* text-shadow: 0 2px 4px rgba(165, 159, 159, 0.4); */
-}
-
-#remaining-budget {
-    color: #f80000;
-}
-
-#remaining-budget.negative {
-    color: #e96241;
-}
-
-/* Input Section */
-.input-section {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.salary-input-container label {
+    font-weight: 600;
+    min-width: 200px;
+}
+
+.salary-display {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #28a745;
+}
+
+body.dark-theme .salary-display {
+    background-color: #3d3d3d;
+    border-left-color: #4caf50;
+}
+
+.salary-display p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Input Section */
+.input-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    align-items: end;
 }
 
 .input-section label {
-    color: white;
     font-weight: 600;
-    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
 }
 
-.input-section select,
-.input-section input {
-    padding: 12px 15px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    transition: all 0.3s ease;
+/* Form Elements */
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
 }
 
-.input-section select:focus,
-.input-section input:focus {
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
     outline: none;
-    border-color: #fff;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
 }
 
-#add-btn {
-    background: linear-gradient(135deg, #fd79a8, #e84393);
+/* Buttons */
+button {
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 12px 30px;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(232, 67, 147, 0.3);
 }
 
-#add-btn:hover {
-    background: linear-gradient(135deg, #e84393, #fd79a8);
+button:hover {
+    background-color: #0056b3;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(232, 67, 147, 0.4);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#set-salary-btn {
+    background-color: #28a745;
+}
+
+#set-salary-btn:hover {
+    background-color: #218838;
 }
 
 /* Expenses List */
-.expenses-list {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 30px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 .expenses-list h2 {
-    color: white;
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    color: #dc3545;
+    font-size: 1.5rem;
 }
 
+body.dark-theme .expenses-list h2 {
+    color: #f44336;
+}
+
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background-color: white;
+    border-radius: 8px;
     overflow: hidden;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 th {
-    background: rgba(255, 255, 255, 0.2);
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: left;
     font-weight: 600;
-    font-size: 1.1rem;
 }
 
-tbody tr {
-    transition: all 0.3s ease;
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
 }
 
 tbody tr:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background-color: #e3f2fd;
+}
+
+body.dark-theme tbody tr:hover {
+    background-color: #424242;
 }
 
 tfoot {
-    background: rgba(255, 255, 255, 0.2);
-    font-weight: 700;
-    font-size: 1.2rem;
+    background-color: #f8f9fa;
+    font-weight: 600;
 }
 
+tfoot td {
+    border-bottom: none;
+    font-size: 1.1rem;
+}
+
+/* Delete Button */
 .delete-btn {
-    background: linear-gradient(135deg, #e17055, #d63031);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    background-color: #dc3545;
+    padding: 8px 12px;
+    font-size: 14px;
 }
 
 .delete-btn:hover {
-    background: linear-gradient(135deg, #d63031, #e17055);
-    transform: translateY(-2px);
+    background-color: #c82333;
 }
 
-/* Footer */
+/* Footer Styles */
 .app-footer {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+    background-color: #343a40;
     color: white;
-    text-align: center;
     padding: 30px 20px;
     margin-top: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+body.dark-theme .app-footer {
+    background-color: #1f1f1f;
 }
 
 .footer-content {
-    max-width: 800px;
+    text-align: center;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -320,15 +272,14 @@ tfoot {
 }
 
 .footer-links a {
-    color: white;
+    color: #adb5bd;
     text-decoration: none;
     margin: 0 15px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    opacity: 1;
+    color: white;
 }
 
 .footer-credit {
@@ -336,7 +287,7 @@ tfoot {
 }
 
 .developer-name {
-    color: #fdcb6e;
+    color: #007bff;
     font-weight: 600;
 }
 
@@ -345,92 +296,54 @@ tfoot {
 }
 
 .social-icon {
-    color: white;
-    font-size: 1.2rem;
+    color: #adb5bd;
+    font-size: 20px;
     margin: 0 10px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #fdcb6e;
-    transform: translateY(-2px);
+    color: #007bff;
 }
 
 .version-info {
-    margin-top: 15px;
     font-size: 0.9rem;
-    opacity: 0.7;
-}
-
-/* Dark Theme Adjustments */
-body.dark .salary-section,
-body.dark .input-section,
-body.dark .expenses-list {
-    background: rgba(45, 52, 54, 0.8);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-body.dark .salary-input-container,
-body.dark .salary-display {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-body.dark #salary-input,
-body.dark .input-section select,
-body.dark .input-section input {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ddd;
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-body.dark table {
-    background: rgba(45, 52, 54, 0.5);
+    color: #6c757d;
+    margin-top: 15px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
     h1 {
         font-size: 2rem;
-        margin: 40px 0 20px 0;
     }
     
-    .salary-section,
-    .input-section,
-    .expenses-list {
-        margin: 15px;
-        padding: 20px;
-    }
-    
-    .salary-section h2,
-    .expenses-list h2 {
-        font-size: 1.5rem;
-    }
-    
-    #salary-input {
-        width: 200px;
-        margin-bottom: 15px;
-        margin-right: 0;
-    }
-    
-    #set-salary-btn {
-        width: 100%;
-    }
-    
-    .input-section {
+    .salary-input-container {
         flex-direction: column;
         align-items: stretch;
     }
     
-    .input-section select,
-    .input-section input,
-    .input-section button {
-        width: 100%;
-        margin: 5px 0;
+    .salary-input-container label {
+        min-width: auto;
+    }
+    
+    .input-section {
+        grid-template-columns: 1fr;
+    }
+    
+    #theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
     }
     
     table {
-        font-size: 0.9rem;
+        font-size: 14px;
     }
     
     th, td {
@@ -439,22 +352,14 @@ body.dark table {
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-    
     .salary-section,
     .input-section,
     .expenses-list {
         padding: 15px;
     }
     
-    #salary-input {
-        width: 100%;
-    }
-    
     table {
-        font-size: 0.8rem;
+        font-size: 12px;
     }
     
     th, td {
@@ -462,7 +367,7 @@ body.dark table {
     }
     
     .delete-btn {
-        padding: 6px 10px;
-        font-size: 0.8rem;
+        padding: 6px 8px;
+        font-size: 12px;
     }
 }

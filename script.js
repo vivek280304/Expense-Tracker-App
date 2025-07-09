@@ -58,33 +58,33 @@ class ExpenseTracker {
         });
     }
 
-    // Theme Management
-    toggleTheme() {
-        const body = document.body;
-        const themeBtn = document.getElementById('theme-toggle');
+    // // Theme Management
+    // toggleTheme() {
+    //     const body = document.body;
+    //     const themeBtn = document.getElementById('theme-toggle');
         
-        if (body.classList.contains('dark')) {
-            body.classList.remove('dark');
-            themeBtn.textContent = 'Dark';
-            localStorage.setItem('theme', 'light');
-        } else {
-            body.classList.add('dark');
-            themeBtn.textContent = 'Light';
-            localStorage.setItem('theme', 'dark');
-        }
-    }
+    //     if (body.classList.contains('dark')) {
+    //         body.classList.remove('dark');
+    //         themeBtn.textContent = 'Dark';
+    //         localStorage.setItem('theme', 'light');
+    //     } else {
+    //         body.classList.add('dark');
+    //         themeBtn.textContent = 'Light';
+    //         localStorage.setItem('theme', 'dark');
+    //     }
+    // }
 
-    // Load saved theme
-    loadTheme() {
-        const savedTheme = localStorage.getItem('theme');
-        const body = document.body;
-        const themeBtn = document.getElementById('theme-toggle');
+    // // Load saved theme
+    // loadTheme() {
+    //     const savedTheme = localStorage.getItem('theme');
+    //     const body = document.body;
+    //     const themeBtn = document.getElementById('theme-toggle');
         
-        if (savedTheme === 'dark') {
-            body.classList.add('dark');
-            themeBtn.textContent = 'Light';
-        }
-    }
+    //     if (savedTheme === 'dark') {
+    //         body.classList.add('dark');
+    //         themeBtn.textContent = 'Light';
+    //     }
+    // }
 
     // Salary Management
     setSalary() {
