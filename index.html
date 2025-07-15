@@ -8,8 +8,8 @@
     <title>Expense Tracker App </title>
 </head>
 <body>
-    <!-- <button id="theme-toggle">Dark</button> -->
-   
+  <button id="theme-toggle">🌙 Dark</button>
+    
     <h1>Expense Tracker</h1>
     
     <!-- Salary Input Section -->
@@ -43,7 +43,7 @@
         <input type="number" id="amount-input" placeholder="eg:5000" required>
         <button id="add-btn">Add</button>
     </div>
-    
+
     <div class="expenses-list">
         <h2>Expenses List</h2>
         <table>
@@ -55,24 +55,19 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody id="expnese-table-body">
+            <tbody id="expense-table-body">
             </tbody>
             <tfoot>
                 <tr>
                     <td>Total:</td>
-                    <td id="total-amount"></td>
+                    <td id="total-amount">₹0</td>
                     <td></td>
                     <td></td>
                 </tr>
             </tfoot>
         </table>
     </div>
-    
-    <!-- Add this at the end of your body tag, before the script tag -->
-    <!-- Add Font Awesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Add this at the end of your body tag, before the script tag -->
+
     <footer class="app-footer">
         <div class="footer-content">
             <p>&copy; 2025 Expense Tracker App</p>
